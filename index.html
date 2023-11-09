@@ -1,0 +1,671 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Yayasan Lentera Surakarta</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <script>
+      document.documentElement.classList.remove("dark");
+    </script>
+    <!-- TAILWIND CONFIG -->
+    <script>
+      tailwind.config = {
+        theme: {
+          // colors: {
+          //   gray: colors.coolGray,
+          //   blue: colors.lightBlue,
+          //   red: colors.rose,
+          //   pink: colors.fuchsia,
+          // },
+          fontFamily: {
+            sans: ["Popins", "sans-serif"],
+            serif: ["Merriweather", "serif"],
+          },
+          extend: {
+            colors: {
+              accent: "#ba4248",
+              dark: "#4d4d4d",
+              light: "#f7f7f7",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- TAILWIND CSS -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+      .swiper-pagination-bullet-active {
+        background-color: #4d4d4d !important;
+      }
+    </style>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+    </style>
+  </head>
+  <body class="bg-light scroll-smooth">
+    <header>
+      <nav class="bg-light border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:py-8">
+          <a href="https://flowbite.com/" class="flex items-center">
+            <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
+            <span class="self-center text-2xl font-semibold whitespace-nowrap">Lentera</span>
+          </a>
+          <button
+            data-collapse-toggle="navbar-default"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <!-- <span class="sr-only">Open main menu</span> -->
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul
+              class="font-medium text-sm flex flex-col items-center p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
+            >
+              <li class="flex justify-center gap-2">
+                <a href="#tentang-lentera" class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0">Tentang Lentera</a>
+                <svg
+                  class="hidden md:block"
+                  width="24px"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.9999 13.9394L17.4696 8.46973L18.5303 9.53039L11.9999 16.0607L5.46961 9.53039L6.53027 8.46973L11.9999 13.9394Z"
+                      fill="#080341"
+                    ></path>
+                  </g>
+                </svg>
+              </li>
+              <li class="flex justify-center gap-2">
+                <a href="#program-pelayanan-kami" class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0"
+                  >Program Pelayanan Kami</a
+                >
+                <svg
+                  class="hidden md:block"
+                  width="24px"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.9999 13.9394L17.4696 8.46973L18.5303 9.53039L11.9999 16.0607L5.46961 9.53039L6.53027 8.46973L11.9999 13.9394Z"
+                      fill="#080341"
+                    ></path>
+                  </g>
+                </svg>
+              </li>
+              <li class="flex justify-center gap-2">
+                <a href="#ikut-terlibat" class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0">Mitra Kerja</a>
+                <svg
+                  class="hidden md:block"
+                  width="24px"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.9999 13.9394L17.4696 8.46973L18.5303 9.53039L11.9999 16.0607L5.46961 9.53039L6.53027 8.46973L11.9999 13.9394Z"
+                      fill="#080341"
+                    ></path>
+                  </g>
+                </svg>
+              </li>
+              <li>
+                <a href="#" class="border border-dark block py-2 px-4 text-dark md:bg-transparent md:px-4 md:py-1"
+                  >Ikut Terlibat</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Start Section: Hero Section -->
+      <section class="py-20">
+        <div class="max-w-screen-xl mx-auto px-6">
+          <div>
+            <h1 class="uppercase text-2xl font-bold text-dark text-center md:text-4xl">Yayasan Lentera Surakarta</h1>
+            <div class="flex flex-col md:items-center md:flex-row pt-8 md:pt-20 gap-4 md:gap-8">
+              <div class="w-full md:w-2/5">
+                <p class="text-lg font-light text-dark md:text-[28px] leading-10 text-center md:text-left">
+                  Yayasan Lentera Surakarta adalah sebuah organisasi yang akan memberikan kontribusi nyata pada upaya
+                  pemberdayaan dan pendampingan masyarakat khususnya pada ODHA dan ADHA.
+                </p>
+              </div>
+              <div class="w-full md:w-3/5">
+                <!-- Swiper -->
+                <div class="flex items-center gap-4">
+                  <div class="swiper-prev hidden md:block">
+                    <svg
+                      width="45px"
+                      height="45px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      transform="matrix(-1, 0, 0, 1, 0, 0)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M9 6L15 12L9 18"
+                          stroke="#4d4d4d"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-1.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-2.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-3.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="swiper-next hidden md:block">
+                    <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M9 6L15 12L9 18"
+                          stroke="#4d4d4d"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section: Hero Section -->
+
+      <!-- Start Section: Prestasi Kami -->
+      <section class="py-20" id="tentang-lentera">
+        <div class="bg-accent">
+          <div class="max-w-screen-xl mx-auto px-6 py-8 md:py-20">
+            <div>
+              <ul class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <li class="px-4 flex flex-col items-center justify-center gap-6 w-full">
+                  <div class="relative flex items-center justify-center w-full h-80">
+                    <h4 class="z-10 text-3xl font-bold text-light text-center uppercase tracking-widest">VISI KAMI</h4>
+                    <img
+                      src="assets/images/image-13.jpeg"
+                      class="absolute top-0 w-full h-80 object-cover bg-dark opacity-70"
+                      alt="image"
+                    />
+                  </div>
+                  <a href="#" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
+                </li>
+                <li class="px-4 flex flex-col items-center justify-center gap-6 w-full">
+                  <div class="relative flex items-center justify-center w-full h-80">
+                    <h4 class="z-10 text-3xl font-bold text-light text-center uppercase tracking-widest">
+                      Latar Belakang
+                    </h4>
+                    <img
+                      src="assets/images/image-11.jpeg"
+                      class="absolute top-0 w-full h-80 object-cover bg-dark opacity-70"
+                      alt="image"
+                    />
+                  </div>
+                  <a href="#" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
+                </li>
+                <li class="px-4 flex flex-col items-center justify-center gap-6 w-full">
+                  <div class="relative flex items-center justify-center w-full h-80">
+                    <h4 class="z-10 text-3xl font-bold text-light text-center uppercase tracking-widest">MISI KAMI</h4>
+                    <img
+                      src="assets/images/image-12.jpeg"
+                      class="absolute top-0 w-full h-80 object-cover bg-dark opacity-70"
+                      alt="image"
+                    />
+                  </div>
+                  <a href="#" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="max-w-screen-xl mx-auto py-8 px-6 md:py-20">
+          <div class="flex items-center justify-between gap-10 flex-col md:flex-row">
+            <h2
+              class="font-bold text-2xl text-dark md:leading-[4rem] text-center md:text-left md:text-5xl leading-none"
+            >
+              Prestasi <br />
+              Kami
+            </h2>
+            <ul class="flex flex-col gap-8 text-2xl text-dark text-center md:text-left">
+              <li>Terakreditasi Tahun 2021</li>
+              <li>Piagam Penghargaan Tahun 2019 dari Menteri Sosial RI</li>
+            </ul>
+            <img src="assets/images/piagam-image.png" alt="piagam" class="w-36" />
+          </div>
+        </div>
+      </section>
+      <!-- End Section: Prestasi Kami -->
+
+      <!-- Start Section: Latar Belakang -->
+      <section class="py-20">
+        <div class="max-w-screen-xl mx-auto px-6 flex flex-col gap-10">
+          <div>
+            <h1 class="text-2xl font-bold text-dark text-center md:text-4xl">Latar Belakang Lentera</h1>
+            <div class="flex flex-col md:items-center md:flex-row pt-8 md:pt-20 gap-4 md:gap-8">
+              <div class="w-full md:w-1/2">
+                <p class="text-lg font-light text-dark md:text-[28px] leading-10 text-justify md:text-left">
+                  Yayasan Lentera Surakarta dirintis oleh beberapa orang relawan yang mempunyai perhatian pada isue
+                  pemberdayaan dan kesehatan masyarakat terutama pada perempuan dan anak-anak sejak tahun 2008.
+                  Berdirinya Lentera dilatar belakangi tingginya angka kemiskinan dan rendahnya derajat kesehatan
+                  masyarakat di Indonesia. Tingginya angka kemiskinan menjadi salah satu penyebab bagi rendahnya
+                  kwalitas hidup manusia terutama pada perempuan, anak dan komunitas marjinal lainnya.
+                </p>
+              </div>
+              <div class="w-full md:w-1/2">
+                <!-- Swiper -->
+                <div class="flex items-center gap-4">
+                  <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-1.jpeg" alt="image" class="w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-2.jpeg" alt="image" class="w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-3.jpeg" alt="image" class="w-full object-cover" />
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-8">
+            <p class="text-lg font-light text-dark md:text-[28px] leading-10 text-justify">
+              Himpitan ekonomi yang semakin sulit dan tingkat pendapatan yang rendah mengakibatkan komunitas miskin
+              susah untuk mengakses sektor kesehatan dan sektor pendidikan, terutama pada kelompok-kelompok masyarakat
+              Tuna sosial seperti pekerja seks komersial (PSK), transgender, kelompok Gay, Bekas warga binaan Lembaga
+              Pemasyarakatan serta Orang yang hidup dengan HIV/AIDS ( ODHA). Dampak yang yang ditimbulkan adalah adanya
+              prostitusi baik secara langsung maupun tidak langsung, yang beresiko terjadinya penularan Penyakit Infeksi
+              Menular Seksual dan Virus HIV.
+            </p>
+            <p class="text-lg font-light text-dark md:text-[28px] leading-10 text-justify">
+              Relawan di Lentera bekerja di komunitas dengan melakukan proses penjangkauan, pendampingan, penguatan
+              matapencaharian dan advokasi. Strategi yang dibangun adalah bagaimana komunitas termasuk ODHA mampu untuk
+              merencanakan program, membangun sinergi dengan pemerintah dan layanan kesehatan serta membangun jejaring
+              dengan pihak-pihak yang terkait. Kerja-kerja yang dilakukan juga difokuskan untuk mereduksi stigma dan
+              diskriminasi bagi Kelompok kelompok dampingan serta mendorong keterlibatan pemerintah untuk lebih
+              memperhatikan kebutuhan mereka.
+            </p>
+            <p class="text-lg font-light text-dark md:text-[28px] leading-10 text-justify">
+              Berangkat dari permasalahan tersebut beberapa relawan sepakat untuk mendirikan sebuah Organisasi yang akan
+              memberikan kontribusi nyata pada upaya pemberdayaan dan pendampingan masyarakat khususnya pada ODHA dan
+              ADHA.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- End Section: Latar Belakang -->
+
+      <!-- Start Section: Program Pelayanan Kami -->
+      <section class="py-20" id="program-pelayanan-kami">
+        <div class="max-w-screen-xl mx-auto px-6 flex flex-col gap-10">
+          <div>
+            <h1 class="uppercase text-2xl font-bold text-dark text-center md:text-4xl">Program Pelayanan Kami</h1>
+            <ul class="flex flex-col md:flex-row gap-8 justify-evenly">
+              <li class="flex flex-col items-center gap-6 md:py-20">
+                <img
+                  src="assets/images/pelayanan-kami/pelayanan-kami-1.png"
+                  alt="gambar pelayanan kami"
+                  class="w-52 h-52"
+                />
+                <h4 class="text-2xl text-dark">Advokasi</h4>
+              </li>
+              <li class="flex flex-col items-center gap-6 md:py-20">
+                <img
+                  src="assets/images/pelayanan-kami/pelayanan-kami-2.png"
+                  alt="gambar pelayanan kami"
+                  class="w-52 h-52"
+                />
+                <h4 class="text-2xl text-dark">Shelter LENTERA</h4>
+              </li>
+              <li class="flex flex-col items-center gap-6 md:py-20">
+                <img
+                  src="assets/images/pelayanan-kami/pelayanan-kami-3.png"
+                  alt="gambar pelayanan kami"
+                  class="w-52 h-52"
+                />
+                <h4 class="text-2xl text-dark">Kesehatan Sosial</h4>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- End Section: Program Pelayanan Kami -->
+
+      <!-- Start Section: Visi & Misi Kami -->
+      <section class="py-20">
+        <div class="bg-accent">
+          <div class="max-w-screen-xl mx-auto py-20 px-6 bg-accent">
+            <div class="flex flex-col items-center gap-8">
+              <h1 class="text-2xl font-bold text-light text-center md:text-4xl">Visi Kami</h1>
+              <div class="max-w-xl">
+                <p class="text-xl text-light md:leading-[3rem] text-center md:text-2xl">
+                  Menjadi organisasi yang mampu meningkatkan kesejahteraan dan kemandirian kelompok-kelompok sosial yang
+                  termarginalkan.
+                </p>
+              </div>
+              <div class="w-full md:w-2/3">
+                <!-- Swiper -->
+                <div class="flex items-center gap-4">
+                  <div class="swiper-prev hidden md:block">
+                    <svg
+                      width="45px"
+                      height="45px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      transform="matrix(-1, 0, 0, 1, 0, 0)"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M9 6L15 12L9 18"
+                          stroke="#f7f7f7"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="swiper mySwiper3">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-5.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-6.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-7.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                  <div class="swiper-next hidden md:block">
+                    <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M9 6L15 12L9 18"
+                          stroke="#f7f7f7"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-accent">
+          <div class="max-w-screen-xl mx-auto py-20 px-6">
+            <div class="flex flex-col items-center gap-8">
+              <h1 class="text-2xl font-bold text-light text-center md:text-4xl">Misi Kami</h1>
+              <p class="text-xl text-light md:leading-[3rem] text-center md:text-2xl">
+                Meningkatkan kesejahteraan anak-anak, terutama yang terinfeksi HIV, dengan pemenuhan Hak Anak sesuai
+                dengan Konvensi Hak Anak Internasional
+                <br /><br />
+                Meningkatkan kesejahteraan perempuan, terutama yang terinfeksi HIV, dengan pemenuhan hak kesehatan dan
+                jaminan ekonomi keluarganya
+                <br /><br />
+                Meningkatkan kesejahteraan ekonomi keluarga ODHA (Orang yang hidup dengan HIV)
+                <br /><br />
+                Melakukan Advokasi kebijakan, pengurangan stigma dan diskriminasi, pendampingan hukum, pendampingan
+                terhadap korban kekerasan pada perempuan dan anak yang terinfeksi HIV
+                <br /><br />
+                Melakukan pendampingan dan layanan kesehatan pada kelompok-kelompok pekerja sekkomersial, transgender
+                dan gay
+                <br /><br />
+                Merangkul semua komponen dan elemen di semua sektor baik dari suwasta, pemerintah dan kelompok
+                masyarakat baik dalam negri maupun luar negri untuk terlibat dalam mendukung program dari LENTERA
+              </p>
+              <ul class="flex flex-col md:flex-row items-center gap-8 py-20">
+                <li><img src="assets/images/image-8.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
+                <li><img src="assets/images/image-9.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
+                <li><img src="assets/images/image-10.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section: Visi Kami -->
+
+      <!-- Start Section: Mitra Kerja -->
+      <section class="py-20" id="mitra-kerja">
+        <div class="max-w-screen-xl mx-auto px-6">
+          <div class="flex flex-col items-center gap-8">
+            <h1 class="uppercase text-2xl font-bold text-dark text-center md:text-4xl">Mitra Kerja</h1>
+            <div class="flex flex-wrap items-center justify-center w-full gap-8 py-10">
+              <img
+                src="assets/images/mitra-kami/kementrian-sosial.png"
+                alt="image mitra kami"
+                class="h-40 object-contain"
+              />
+              <img src="assets/images/mitra-kami/dinas-sosial.png" alt="image mitra kami" class="h-40 object-contain" />
+              <img src="assets/images/mitra-kami/logo-4.png" alt="image mitra kami" class="h-60 object-contain" />
+              <img src="assets/images/mitra-kami/logo-5.png" alt="image mitra kami" class="h-60 object-contain" />
+              <img
+                src="assets/images/mitra-kami/dinas-sosial-surakarta.png"
+                alt="image mitra kami"
+                class="h-32 object-contain"
+              />
+              <img
+                src="assets/images/mitra-kami/dinas-sosial-jawa-tengah.png"
+                alt="image mitra kami"
+                class="h-32 object-contain"
+              />
+              <img src="assets/images/mitra-kami/dr-moewardi.png" alt="image mitra kami" class="h-40 object-contain" />
+              <img src="assets/images/mitra-kami/forum-lsm.png" alt="image mitra kami" class="h-40 object-contain" />
+            </div>
+            <div>
+              <p class="text-xl md:text-3xl text-dark text-center">
+                Donatur yang setia mendukung Lentera
+                <br /><br />
+                Kelompok masyarakat baik nasional maupun internasional
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Section: Mitra Kerja -->
+    </main>
+
+    <footer>
+      <div class="max-w-screen-xl mx-auto py-20 px-6" id="ikut-terlibat">
+        <div class="flex flex-col items-center gap-8">
+          <h1 class="uppercase text-2xl font-bold text-dark text-center md:text-4xl">Mitra Kerja</h1>
+          <h4 class="py-6 font-bold text-xl text-dark text-center md:text-2xl">
+            Bantu Yayaysan Lentera Surakarta dengan cara mendonasi
+          </h4>
+          <div>
+            <p class="text-xl md:text-2xl text-dark text-center">
+              Bank: Bank Mandiri Cabang Laweyan Surakarta
+              <br />
+              No. Rek: 138.00.1795094.5
+              <br />
+              Atas nama: Yayasan Lentera Surakarta
+            </p>
+          </div>
+          <div class="max-w-2xl flex items-center">
+            <div class="w-full md:w-1/2">
+              <img src="assets/images/footer.png" alt="image" class="w-full object-contain" />
+            </div>
+            <div class="w-full md:w-1/2">
+              <h4 class="text-xl md:text-2xl text-dark font-bold">Kontak</h4>
+              <ul class="flex flex-col gap-2 py-4">
+                <li>
+                  <a href="#" class="flex gap-2 items-center">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                          stroke="#4f4f4f"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                    <span class="text-xl text-dark"> +6281329054059 </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex gap-2 items-center">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M3 5.5C3 14.0604 9.93959 21 18.5 21C18.8862 21 19.2691 20.9859 19.6483 20.9581C20.0834 20.9262 20.3009 20.9103 20.499 20.7963C20.663 20.7019 20.8185 20.5345 20.9007 20.364C21 20.1582 21 19.9181 21 19.438V16.6207C21 16.2169 21 16.015 20.9335 15.842C20.8749 15.6891 20.7795 15.553 20.6559 15.4456C20.516 15.324 20.3262 15.255 19.9468 15.117L16.74 13.9509C16.2985 13.7904 16.0777 13.7101 15.8683 13.7237C15.6836 13.7357 15.5059 13.7988 15.3549 13.9058C15.1837 14.0271 15.0629 14.2285 14.8212 14.6314L14 16C11.3501 14.7999 9.2019 12.6489 8 10L9.36863 9.17882C9.77145 8.93713 9.97286 8.81628 10.0942 8.64506C10.2012 8.49408 10.2643 8.31637 10.2763 8.1317C10.2899 7.92227 10.2096 7.70153 10.0491 7.26005L8.88299 4.05321C8.745 3.67376 8.67601 3.48403 8.55442 3.3441C8.44701 3.22049 8.31089 3.12515 8.15802 3.06645C7.98496 3 7.78308 3 7.37932 3H4.56201C4.08188 3 3.84181 3 3.63598 3.09925C3.4655 3.18146 3.29814 3.33701 3.2037 3.50103C3.08968 3.69907 3.07375 3.91662 3.04189 4.35173C3.01413 4.73086 3 5.11378 3 5.5Z"
+                          stroke="#4f4f4f"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </g>
+                    </svg>
+                    <span class="text-xl text-dark"> +628562998191 </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex gap-2 items-center">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                      <g id="SVGRepo_iconCarrier">
+                        <path
+                          d="M4 7.00005L10.2 11.65C11.2667 12.45 12.7333 12.45 13.8 11.65L20 7"
+                          stroke="#000000"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                        <rect
+                          x="3"
+                          y="5"
+                          width="18"
+                          height="14"
+                          rx="2"
+                          stroke="#4f4f4f"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        ></rect>
+                      </g>
+                    </svg>
+                    <span class="text-xl text-dark"> lenterasurakarta01@gmail.com </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+      var swiper = new Swiper(".mySwiper2", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+      var swiper = new Swiper(".mySwiper3", {
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>
