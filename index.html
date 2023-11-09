@@ -1,10 +1,11 @@
-<html>
+<html class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <title>Yayasan Lentera Surakarta</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -16,12 +17,6 @@
     <script>
       tailwind.config = {
         theme: {
-          // colors: {
-          //   gray: colors.coolGray,
-          //   blue: colors.lightBlue,
-          //   red: colors.rose,
-          //   pink: colors.fuchsia,
-          // },
           fontFamily: {
             sans: ["Popins", "sans-serif"],
             serif: ["Merriweather", "serif"],
@@ -53,13 +48,12 @@
       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
     </style>
   </head>
-  <body class="bg-light scroll-smooth">
+  <body class="bg-light">
     <header>
       <nav class="bg-light border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:py-8">
           <a href="https://flowbite.com/" class="flex items-center">
-            <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" /> -->
-            <span class="self-center text-2xl font-semibold whitespace-nowrap">Lentera</span>
+            <img src="assets/logo/lentera.png" class="h-24 mr-3" alt="Lentera Logo" />
           </a>
           <button
             data-collapse-toggle="navbar-default"
@@ -84,7 +78,9 @@
               class="font-medium text-sm flex flex-col items-center p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0"
             >
               <li class="flex justify-center gap-2">
-                <a href="#tentang-lentera" class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0">Tentang Lentera</a>
+                <a href="#tentang-lentera" class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0"
+                  >Tentang Lentera</a
+                >
                 <svg
                   class="hidden md:block"
                   width="24px"
@@ -106,7 +102,9 @@
                 </svg>
               </li>
               <li class="flex justify-center gap-2">
-                <a href="#program-pelayanan-kami" class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0"
+                <a
+                  href="#program-pelayanan-kami"
+                  class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0"
                   >Program Pelayanan Kami</a
                 >
                 <svg
@@ -130,7 +128,9 @@
                 </svg>
               </li>
               <li class="flex justify-center gap-2">
-                <a href="#ikut-terlibat" class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0">Mitra Kerja</a>
+                <a href="#ikut-terlibat" class="block py-2 pl-3 pr-4 text-dark rounded md:bg-transparent md:p-0"
+                  >Mitra Kerja</a
+                >
                 <svg
                   class="hidden md:block"
                   width="24px"
@@ -152,7 +152,7 @@
                 </svg>
               </li>
               <li>
-                <a href="#" class="border border-dark block py-2 px-4 text-dark md:bg-transparent md:px-4 md:py-1"
+                <a href="#ikut-terlibat" class="border border-dark block py-2 px-4 text-dark md:bg-transparent md:px-4 md:py-1"
                   >Ikut Terlibat</a
                 >
               </li>
@@ -164,7 +164,7 @@
 
     <main>
       <!-- Start Section: Hero Section -->
-      <section class="py-20">
+      <section class="py-20" data-aos="fade-up">
         <div class="max-w-screen-xl mx-auto px-6">
           <div>
             <h1 class="uppercase text-2xl font-bold text-dark text-center md:text-4xl">Yayasan Lentera Surakarta</h1>
@@ -211,6 +211,18 @@
                       <div class="swiper-slide">
                         <img src="assets/images/image-3.jpeg" alt="image" class="h-80 w-full object-cover" />
                       </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-4.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-5.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-26.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-27.jpeg" alt="image" class="h-80 w-full object-cover" />
+                      </div>
                     </div>
                     <div class="swiper-pagination"></div>
                   </div>
@@ -238,21 +250,21 @@
       <!-- End Section: Hero Section -->
 
       <!-- Start Section: Prestasi Kami -->
-      <section class="py-20" id="tentang-lentera">
+      <section class="py-20" id="tentang-lentera" id="prestasi-kami">
         <div class="bg-accent">
-          <div class="max-w-screen-xl mx-auto px-6 py-8 md:py-20">
+          <div class="max-w-screen-xl mx-auto px-6 py-8 md:py-20" data-aos="fade-up">
             <div>
               <ul class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <li class="px-4 flex flex-col items-center justify-center gap-6 w-full">
                   <div class="relative flex items-center justify-center w-full h-80">
                     <h4 class="z-10 text-3xl font-bold text-light text-center uppercase tracking-widest">VISI KAMI</h4>
                     <img
-                      src="assets/images/image-13.jpeg"
+                      src="assets/images/image-6.jpeg"
                       class="absolute top-0 w-full h-80 object-cover bg-dark opacity-70"
                       alt="image"
                     />
                   </div>
-                  <a href="#" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
+                  <a href="#visi" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
                 </li>
                 <li class="px-4 flex flex-col items-center justify-center gap-6 w-full">
                   <div class="relative flex items-center justify-center w-full h-80">
@@ -260,30 +272,30 @@
                       Latar Belakang
                     </h4>
                     <img
-                      src="assets/images/image-11.jpeg"
+                      src="assets/images/image-7.jpeg"
                       class="absolute top-0 w-full h-80 object-cover bg-dark opacity-70"
                       alt="image"
                     />
                   </div>
-                  <a href="#" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
+                  <a href="#latar-belakang" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
                 </li>
                 <li class="px-4 flex flex-col items-center justify-center gap-6 w-full">
                   <div class="relative flex items-center justify-center w-full h-80">
                     <h4 class="z-10 text-3xl font-bold text-light text-center uppercase tracking-widest">MISI KAMI</h4>
                     <img
-                      src="assets/images/image-12.jpeg"
+                      src="assets/images/image-8.jpeg"
                       class="absolute top-0 w-full h-80 object-cover bg-dark opacity-70"
                       alt="image"
                     />
                   </div>
-                  <a href="#" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
+                  <a href="#misi" class="block px-10 py-2 border-2 border-light text-light uppercase">Baca Lagi</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="max-w-screen-xl mx-auto py-8 px-6 md:py-20">
+        <div class="max-w-screen-xl mx-auto py-8 px-6 md:py-20" data-aos="fade-up">
           <div class="flex items-center justify-between gap-10 flex-col md:flex-row">
             <h2
               class="font-bold text-2xl text-dark md:leading-[4rem] text-center md:text-left md:text-5xl leading-none"
@@ -302,8 +314,8 @@
       <!-- End Section: Prestasi Kami -->
 
       <!-- Start Section: Latar Belakang -->
-      <section class="py-20">
-        <div class="max-w-screen-xl mx-auto px-6 flex flex-col gap-10">
+      <section class="py-20" id="latar-belakang">
+        <div class="max-w-screen-xl mx-auto px-6 flex flex-col gap-10" data-aos="fade-up">
           <div>
             <h1 class="text-2xl font-bold text-dark text-center md:text-4xl">Latar Belakang Lentera</h1>
             <div class="flex flex-col md:items-center md:flex-row pt-8 md:pt-20 gap-4 md:gap-8">
@@ -322,13 +334,25 @@
                   <div class="swiper mySwiper2">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <img src="assets/images/image-1.jpeg" alt="image" class="w-full object-cover" />
+                        <img src="assets/images/image-9.jpeg" alt="image" class="w-full object-cover h-96" />
                       </div>
                       <div class="swiper-slide">
-                        <img src="assets/images/image-2.jpeg" alt="image" class="w-full object-cover" />
+                        <img src="assets/images/image-10.jpeg" alt="image" class="w-full object-cover h-96 object-center" />
                       </div>
                       <div class="swiper-slide">
-                        <img src="assets/images/image-3.jpeg" alt="image" class="w-full object-cover" />
+                        <img src="assets/images/image-11.jpeg" alt="image" class="w-full object-cover h-96 object-center" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-12.jpeg" alt="image" class="w-full object-cover h-96 object-center" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-13.jpeg" alt="image" class="w-full object-cover h-96 object-center" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-14.jpeg" alt="image" class="w-full object-cover h-96 object-center" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-15.jpeg" alt="image" class="w-full object-cover h-96 object-center" />
                       </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -365,7 +389,7 @@
       <!-- End Section: Latar Belakang -->
 
       <!-- Start Section: Program Pelayanan Kami -->
-      <section class="py-20" id="program-pelayanan-kami">
+      <section class="py-20" id="program-pelayanan-kami" data-aos="fade-up">
         <div class="max-w-screen-xl mx-auto px-6 flex flex-col gap-10">
           <div>
             <h1 class="uppercase text-2xl font-bold text-dark text-center md:text-4xl">Program Pelayanan Kami</h1>
@@ -401,8 +425,8 @@
       <!-- End Section: Program Pelayanan Kami -->
 
       <!-- Start Section: Visi & Misi Kami -->
-      <section class="py-20">
-        <div class="bg-accent">
+      <section class="py-20" data-aos="fade-up">
+        <div class="bg-accent" id="visi">
           <div class="max-w-screen-xl mx-auto py-20 px-6 bg-accent">
             <div class="flex flex-col items-center gap-8">
               <h1 class="text-2xl font-bold text-light text-center md:text-4xl">Visi Kami</h1>
@@ -440,13 +464,25 @@
                   <div class="swiper mySwiper3">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <img src="assets/images/image-5.jpeg" alt="image" class="h-80 w-full object-cover" />
+                        <img src="assets/images/image-16.jpeg" alt="image" class="h-96 w-full object-cover object-center" />
                       </div>
                       <div class="swiper-slide">
-                        <img src="assets/images/image-6.jpeg" alt="image" class="h-80 w-full object-cover" />
+                        <img src="assets/images/image-17.jpeg" alt="image" class="h-96 w-full object-cover object-center" />
                       </div>
                       <div class="swiper-slide">
-                        <img src="assets/images/image-7.jpeg" alt="image" class="h-80 w-full object-cover" />
+                        <img src="assets/images/image-18.jpeg" alt="image" class="h-96 w-full object-cover object-center" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-19.jpeg" alt="image" class="h-96 w-full object-cover object-center" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-20.jpeg" alt="image" class="h-96 w-full object-cover object-center" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-21.jpeg" alt="image" class="h-96 w-full object-cover object-center" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="assets/images/image-22.jpeg" alt="image" class="h-96 w-full object-cover object-center" />
                       </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -471,7 +507,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-accent">
+        <div class="bg-accent" id="misi">
           <div class="max-w-screen-xl mx-auto py-20 px-6">
             <div class="flex flex-col items-center gap-8">
               <h1 class="text-2xl font-bold text-light text-center md:text-4xl">Misi Kami</h1>
@@ -494,9 +530,9 @@
                 masyarakat baik dalam negri maupun luar negri untuk terlibat dalam mendukung program dari LENTERA
               </p>
               <ul class="flex flex-col md:flex-row items-center gap-8 py-20">
-                <li><img src="assets/images/image-8.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
-                <li><img src="assets/images/image-9.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
-                <li><img src="assets/images/image-10.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
+                <li><img src="assets/images/image-23.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
+                <li><img src="assets/images/image-24.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
+                <li><img src="assets/images/image-25.jpeg" alt="image" class="w-full object-cover aspect-square" /></li>
               </ul>
             </div>
           </div>
@@ -505,7 +541,7 @@
       <!-- End Section: Visi Kami -->
 
       <!-- Start Section: Mitra Kerja -->
-      <section class="py-20" id="mitra-kerja">
+      <section class="py-20" id="mitra-kerja" data-aos="fade-up">
         <div class="max-w-screen-xl mx-auto px-6">
           <div class="flex flex-col items-center gap-8">
             <h1 class="uppercase text-2xl font-bold text-dark text-center md:text-4xl">Mitra Kerja</h1>
@@ -545,7 +581,7 @@
     </main>
 
     <footer>
-      <div class="max-w-screen-xl mx-auto py-20 px-6" id="ikut-terlibat">
+      <div class="max-w-screen-xl mx-auto py-20 px-6" id="ikut-terlibat" data-aos="fade-up">
         <div class="flex flex-col items-center gap-8">
           <h1 class="uppercase text-2xl font-bold text-dark text-center md:text-4xl">Mitra Kerja</h1>
           <h4 class="py-6 font-bold text-xl text-dark text-center md:text-2xl">
@@ -665,6 +701,13 @@
         pagination: {
           el: ".swiper-pagination",
         },
+      });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        debounceDelay: 50,
+        duration: 800,
       });
     </script>
   </body>
